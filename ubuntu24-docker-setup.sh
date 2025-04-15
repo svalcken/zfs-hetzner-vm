@@ -38,4 +38,4 @@ echo Status Docker Service:
 sudo systemctl status docker
 
 echo Additional Tools:
-sudo apt install -y multitail galances
+sudo apt install -y multitail glances
