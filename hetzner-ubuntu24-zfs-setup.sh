@@ -2,7 +2,7 @@
 
 : <<'end_header_info'
 (c) Andrey Prokopenko job@terem.fr
-fully automatic script to install Ubuntu 20 LTS with ZFS root on Hetzner VPS
+fully automatic script to install Ubuntu 24 LTS with ZFS root on Hetzner VPS
 WARNING: all data on the disk will be destroyed
 How to use: add SSH key to the rescue console, set it OS to linux64, then press "mount rescue and power cycle" button
 Next, connect via SSH to console, and run the script
@@ -572,7 +572,7 @@ if [[ $v_swap_size -gt 0 ]]; then
 fi
 
 echo "======= setting up initial system packages =========="
-debootstrap --arch=amd64 jammy "$c_zfs_mount_dir" "$c_deb_packages_repo"
+debootstrap --arch=amd64 noble "$c_zfs_mount_dir" "$c_deb_packages_repo"
 
 zfs set devices=off "$v_rpool_name"
 
