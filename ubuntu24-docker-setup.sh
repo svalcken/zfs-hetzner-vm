@@ -36,4 +36,6 @@ sudo systemctl enable docker
 
 echo Status Docker Service:
 sudo systemctl status docker
-ubuntu 24 r
+
+echo Additional Tools:
+sudo apt install -y multitail galances
